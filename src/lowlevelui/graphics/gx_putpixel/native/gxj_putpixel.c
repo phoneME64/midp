@@ -2244,12 +2244,12 @@ static void
 drawCompleteFilledEllipse(gxj_screen_buffer *sbuf, const jshort *clip,
     gxj_pixel_type color, int x, int y, int width, int height) {
 
-  int     evenXOffset, evenYOffset, a, b;
-  int     xCenter, yCenter, aSquared, bSquared;
-  int     twoAsquared, twoBsquared;
-  int     fourAsquared, fourBsquared;
-  int     xSlope, ySlope;
-  int     aSquaredTwo, bSquaredTwo;
+  int     evenXOffset = 0, evenYOffset = 0, a = 0, b = 0;
+  int     xCenter = 0, yCenter = 0, aSquared = 0, bSquared = 0;
+  int     twoAsquared = 0, twoBsquared = 0;
+  int     fourAsquared = 0, fourBsquared = 0;
+  int     xSlope = 0, ySlope = 0;
+  int     aSquaredTwo = 0, bSquaredTwo = 0;
   int     decision;
   int     ret;
 
@@ -2310,12 +2310,12 @@ static void
 drawCompleteDottedEllipse(gxj_screen_buffer *sbuf, const jshort *clip,
     gxj_pixel_type color, int x, int y, int width, int height) {
 
-  int     evenXOffset, evenYOffset, a, b;
-  int     xCenter, yCenter, aSquared, bSquared;
-  int     twoAsquared, twoBsquared;
-  int     fourAsquared, fourBsquared;
-  int     xSlope, xSlopeInit, ySlope, ySlopeInit;
-  int     aSquaredTwo, bSquaredTwo;
+  int     evenXOffset = 0, evenYOffset = 0, a = 0, b = 0;
+  int     xCenter = 0, yCenter = 0, aSquared = 0, bSquared = 0;
+  int     twoAsquared = 0, twoBsquared = 0;
+  int     fourAsquared = 0, fourBsquared = 0;
+  int     xSlope = 0, xSlopeInit = 0, ySlope = 0, ySlopeInit = 0;
+  int     aSquaredTwo = 0, bSquaredTwo = 0;
   int     decision;
   int     ret;
   int     quadrant;
@@ -2424,12 +2424,12 @@ static void
 drawCompleteOutlineEllipse(gxj_screen_buffer *sbuf, const jshort *clip,
     gxj_pixel_type color, int x, int y, int width, int height) {
 
-  int     evenXOffset, evenYOffset, a, b;
-  int     xCenter, yCenter, aSquared, bSquared;
-  int     twoAsquared, twoBsquared;
-  int     fourAsquared, fourBsquared;
-  int     xSlope, ySlope;
-  int     aSquaredTwo, bSquaredTwo;
+  int     evenXOffset = 0, evenYOffset = 0, a = 0, b = 0;
+  int     xCenter = 0, yCenter = 0, aSquared = 0, bSquared = 0;
+  int     twoAsquared = 0, twoBsquared = 0;
+  int     fourAsquared = 0, fourBsquared = 0;
+  int     xSlope = 0, ySlope = 0;
+  int     aSquaredTwo = 0, bSquaredTwo = 0;
   int     decision;
   int     ret;
 
