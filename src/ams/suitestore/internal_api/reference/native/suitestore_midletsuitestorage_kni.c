@@ -82,7 +82,7 @@ MIDP_ERROR midpport_suite_open_properties(SuiteIdType suiteId,
     *propHandle = -1;
     *numProperties = 0;
     do {
-        errorCode = get_property_file(suiteId, KNI_TRUE, &filename);
+        errorCode = (MIDP_ERROR)get_property_file(suiteId, KNI_TRUE, &filename);
         if (errorCode != MIDP_ERROR_NONE) {
             break;
         }

@@ -292,13 +292,13 @@ KNIEXPORT KNI_RETURNTYPE_INT
 KNIDECL(com_sun_midp_io_j2me_push_ConnectionRegistry_list0) {
     char *midletName = NULL;
     int available;
-    int connsize;
+    //int connsize;
     int nameLength;
     char *conn;
     int ret = -1;
 
     available = KNI_GetParameterAsBoolean(2);
-    connsize = KNI_GetParameterAsInt(4);
+    /*connsize = */KNI_GetParameterAsInt(4);
 
     KNI_StartHandles(2);
 

@@ -1912,14 +1912,13 @@ class SkinRomizer extends RomUtil {
      * @param data data to convert into the C array, can be null
      */
     void writeSkinDescription(byte[] data) {
-        pl("");
-        pl("static const unsigned char skin_description[] = {");
         if (data != null) {
+            pl("");
+            pl("static const unsigned char skin_description[] = {");
             new RomizedByteArray(data).printDataArray(writer, "        ", 11);
-        } else {
             pl("    0");
+            pl("};");
         }
-        pl("};");
 
         pl("");
         pl("/**");

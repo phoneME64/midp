@@ -83,7 +83,7 @@ static int g_numberOfEntries = 0;
  */
 static IconCache*
 get_icon_cache_for_suite(SuiteIdType suiteId) {
-    IconCache* pData;
+    //IconCache* pData;
     int i;
 
     if (!g_iconsLoaded) {
@@ -93,7 +93,7 @@ get_icon_cache_for_suite(SuiteIdType suiteId) {
         }
     }
 
-    pData = g_pIconCache;
+    //pData = g_pIconCache;
 
     /* search the given suite Id in the array of cache entries */
     for (i = 0; i < g_numberOfIcons; i++) {

@@ -1537,7 +1537,7 @@ drawClippedOutlineArc(gxj_screen_buffer *sbuf, gxj_pixel_type color,
     int a,b;            
     int a2,b2, S, T;
     int xCenter, yCenter;
-    int curRatio;
+    //int curRatio;
     int evenXOffset, evenYOffset;
     dotted_draw_state dds[4]; /* used for dotted lines only */
     int x_point, y_point;
@@ -1555,7 +1555,7 @@ drawClippedOutlineArc(gxj_screen_buffer *sbuf, gxj_pixel_type color,
     x_point = 0;
     y_point = b;
     while(y_point >= 0) {
-      curRatio = (x_point == 0) ? MAXINT32 : ((y_point * 1000) / x_point);
+      //curRatio = (x_point == 0) ? MAXINT32 : ((y_point * 1000) / x_point);
 
       drawSymmetricPixels(sbuf, color, lineStyle, 0, clip,
           startRatio, startQuadrant, endRatio, endQuadrant,

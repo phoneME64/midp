@@ -1685,7 +1685,7 @@ MIDPError rollback_transaction() {
         g_transactionStarted = 0;
     }
 
-    return ALL_OK;
+    return status;
 }
 
 /**

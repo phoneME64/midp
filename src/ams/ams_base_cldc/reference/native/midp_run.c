@@ -1031,13 +1031,13 @@ static MIDP_ERROR getClassPathPlus(SuiteIdType suiteId,
                     * (jarPathLen + 1 + additionalPathLength + 1));
     if (NULL == newPath) {
         pcsl_string_free(&jarPath);
-        return OUT_OF_MEM_LEN;
+        return (MIDP_ERROR)OUT_OF_MEM_LEN;
     }
 
     jarPathData = pcsl_string_get_utf16_data(&jarPath);
     if (NULL == jarPathData) {
         pcsl_string_free(&jarPath);
-        return OUT_OF_MEM_LEN;
+        return (MIDP_ERROR)OUT_OF_MEM_LEN;
     }
     for (i = 0; i < jarPathLen; i++) {
         newPath[i] = (JvmPathChar)jarPathData[i];

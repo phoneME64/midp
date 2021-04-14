@@ -102,7 +102,7 @@ rmsdb_get_unique_id_path(pcsl_string* filenameBase, StorageIdType storageId,
         return MIDP_ERROR_ILLEGAL_ARGUMENT;
     }
 
-    midpErr = buildSuiteFilename(filenameBase, name, extension == IDX_EXTENSION_INDEX
+    midpErr = (MIDP_ERROR)buildSuiteFilename(filenameBase, name, extension == IDX_EXTENSION_INDEX
                                           ? MIDP_RMS_IDX_EXT : MIDP_RMS_DB_EXT,
                                           res_path);
 
@@ -318,7 +318,7 @@ rmsdb_get_record_store_list(pcsl_string* filenameBase, pcsl_string* *const ppNam
     status = buildSuiteFilename(filenameBase, &PCSL_STRING_EMPTY, -1, 
                                  &root);
 
-    if (status != MIDP_ERROR_NONE) {
+    if (status != (MIDPError)MIDP_ERROR_NONE) {
         return status;
     }
 

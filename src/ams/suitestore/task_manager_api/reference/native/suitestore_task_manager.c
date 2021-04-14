@@ -568,8 +568,8 @@ midp_change_suite_storage(SuiteIdType suiteId, StorageIdType newStorageId) {
         }
 
         do {
-            jsize oldRootLength;
-            jsize newRootLength;
+            //jsize oldRootLength;
+            //jsize newRootLength;
             const pcsl_string* newRoot;
             const pcsl_string* oldRoot;
             char* pszError = NULL;
@@ -594,8 +594,8 @@ midp_change_suite_storage(SuiteIdType suiteId, StorageIdType newStorageId) {
 
             newRoot = storage_get_root(newStorageId);
             oldRoot = storage_get_root(pData->storageId);
-            newRootLength = pcsl_string_length(newRoot);
-            oldRootLength = pcsl_string_length(oldRoot);
+            /*newRootLength = */pcsl_string_length(newRoot);
+            /*oldRootLength = */pcsl_string_length(oldRoot);
 
             status = ALL_OK;
 
