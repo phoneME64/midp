@@ -1,6 +1,4 @@
 #
-#  
-#
 # Copyright  1990-2007 Sun Microsystems, Inc. All Rights Reserved.
 # DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER
 # 
@@ -25,33 +23,11 @@
 #
 ######################################################################
 #
-# Module's Component Configuration file
-#
-# Remember: It is up to the module itself to impose rules of
-# how to compile the options. All the global Makefile needs
-# is the final def. of Java and native file lists and some
-# other def. (like VPATH)
+# Platform specific resources 
 #
 ######################################################################
 
-# Adds to global SUBSYSTEMS list
-#
-SUBSYSTEMS += socket_notify
-ifeq ($(TARGET_VM), cldc_vm)
-#ifneq (,$(findstring linux_,$(PLATFORM)))
 
-# vpath for ( socket_notify ) subsystem
-#
-vpath % $(SUBSYSTEM_DIR)/protocol/socket_notify/reference/native
-
-# Native files for the ( socket_notify ) module
-#
-
-SUBSYSTEM_SOCKET_NOTIFY_NATIVE_FILES += \
-	socket_notify_export.c
-
-SUBSYSTEM_SOCKET_NOTIFY_EXTRA_INCLUDES += \
-    -I$(SUBSYSTEM_DIR)/protocol/socket_notify/include
-
-#endif
-endif
+# Directory with image resources
+INT_INPUT_AMS_IMAGES_DIR = \
+  $(PROJECT_APPMANAGER_UI_RESOURCE_DIR)/$(PLATFORM)

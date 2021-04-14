@@ -43,5 +43,9 @@ SUBSYSTEM_PUSH_TIMER_EXTRA_INCLUDES += \
 # Platform
 #
 ifeq ($(TARGET_VM), cldc_vm)
-include $(SUBSYSTEM_PUSH_DIR)/push_timer/$(PLATFORM)/lib.gmk
+	ifeq ($(PLATFORM), sdl)
+		include $(SUBSYSTEM_PUSH_DIR)/push_timer/stubs/lib.gmk
+	else
+		include $(SUBSYSTEM_PUSH_DIR)/push_timer/$(PLATFORM)/lib.gmk
+	endif
 endif

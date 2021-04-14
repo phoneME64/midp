@@ -31,7 +31,11 @@
 
 # vpath for this platform specific files
 #
-vpath % $(SUBSYSTEM_DIR)/push/push_timer/$(PLATFORM)/native
+ifeq ($(PLATFORM), sdl)
+	vpath % $(SUBSYSTEM_DIR)/push/push_timer/stubs/native
+else
+	vpath % $(SUBSYSTEM_DIR)/push/push_timer/$(PLATFORM)/native
+endif
 
 # Additional native files for the platform
 #

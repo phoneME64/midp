@@ -120,6 +120,10 @@ ifeq ($(PLATFORM), linux_fb)
   INCLUDE_SHELL_SCRIPTS = true
 endif
 
+ifeq ($(PLATFORM), sdl)
+  INCLUDE_SHELL_SCRIPTS = true
+endif
+
 ifeq ($(PLATFORM), win32)
   INCLUDE_SHELL_SCRIPTS = true
 endif

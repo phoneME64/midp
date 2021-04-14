@@ -53,6 +53,10 @@ else
     ifeq ($(PLATFORM), win32_gci)
         include $(ANC_DIR)/stubs/lib.gmk
     else
-        include $(ANC_DIR)/$(PLATFORM)/lib.gmk
+    	ifeq ($(PLATFORM), sdl)
+        	include $(ANC_DIR)/stubs/lib.gmk
+	    else
+    	    include $(ANC_DIR)/$(PLATFORM)/lib.gmk
+    	endif
     endif
 endif
